@@ -141,6 +141,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/DefaultSidebarTab</li>
+
 <li>$:/config/NewJournal/Text</li>
 
 <li>$:/config/NewJournal/Title</li>
@@ -150,6 +152,8 @@ Error message and password prompt
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-journal</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager</li>
+
+<li>$:/config/RelinkOnRename</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/new-journal-here</li>
 
@@ -185,6 +189,8 @@ Error message and password prompt
 
 <li>$:/state/tab-2065006209</li>
 
+<li>$:/state/tab/sidebar--595412856</li>
+
 <li>$:/state/tabs/controlpanel/toolbars-1345989671</li>
 
 <li>$:/status/RequireReloadDueToPluginChange</li>
@@ -197,7 +203,7 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>Practice 22rd July 2021</li>
+<li>Practice 22nd July 2021</li>
 
 </ul>
 </p>
@@ -213,9 +219,11 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20210723094859851" modified="20210723094859851" title="$:/config/DefaultSidebarTab">
+<pre>$:/core/ui/SideBar/Recent</pre>
+</div>
 <div created="20210723092248125" modified="20210723093205687" title="$:/config/NewJournal/Text">
-<pre>
----
+<pre>---
 ! Skills Practiced
 
 
@@ -254,6 +262,9 @@ Error message and password prompt
 </div>
 <div created="20210723092546128" modified="20210723092546128" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager">
 <pre>show</pre>
+</div>
+<div created="20210723094335596" modified="20210723094335596" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div created="20210723092517870" modified="20210723092527913" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/new-journal-here">
 <pre>hide</pre>
@@ -10152,20 +10163,23 @@ Error message and password prompt
 <div created="20210723092513894" modified="20210723093147949" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/StoryView</pre>
 </div>
-<div created="20210723093216754" modified="20210723093237273" title="$:/state/tab--2112689675">
-<pre>$:/core/ui/ControlPanel/Basics</pre>
+<div created="20210723093216754" modified="20210723094903994" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
 <div created="20210723093013575" modified="20210723093024744" title="$:/state/tab--263979361">
 <pre>$:/core/ui/TiddlerInfo/Fields</pre>
 </div>
-<div created="20210723093228719" modified="20210723093234403" title="$:/state/tab--959111941">
-<pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
+<div created="20210723093228719" modified="20210723094954898" title="$:/state/tab--959111941">
+<pre>$:/core/ui/ControlPanel/EditorTypes</pre>
 </div>
-<div created="20210723092029538" modified="20210723093155118" title="$:/state/tab-1749438307">
+<div created="20210723092029538" modified="20210723094901822" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20210723092035715" modified="20210723092047027" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
+</div>
+<div created="20210723094307752" modified="20210723094855804" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/yyySideBar/Recent</pre>
 </div>
 <div created="20210723092528893" modified="20210723092531824" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -10176,7 +10190,7 @@ Error message and password prompt
 <div created="20210722092135081" creator="M" modified="20210722092154162" modifier="M" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210722092011164" list="$:/ControlPanel [[Practice 22rd July 2021]]" modified="20210722093139192" title="$:/StoryList">
+<div created="20210723094316568" list="[[Practice 22nd July 2021]]" modified="20210723094922315" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10288,36 +10302,75 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210722092607824" modified="20210722092940886" tags="Journal Lesson" title="Practice 22rd July 2021">
-<pre>Today I had my first lesson!
-My coach's name is Sophie Torrington
+<div created="20210722092607824" modified="20210722100344602" tags="Journal Lesson" title="Practice 22nd July 2021">
+<pre>Today I had my first lesson in a long time! My new coach's name is Sophie Torrington.
+I also cancelled my group lessons and switched to a patch ice membership
 
 ---
 ! Skills Practiced
+* Basic edges
+* Cross rolls
+* Three turns
+* Edge pulls (one foot slalom)
+* Forward skating
+* All single jumps + three jump
+* Camel + sit spin
 
 
 ! Exercises Practiced
+* Cross rolls while keeping knee bend
+* Inside three -&gt; FO edge -&gt; Forward cross -&gt; Repeat
 
 
 ! Corrections
-!! Footwork
+!! __Footwork__
+!!! Basic Edges
+* For outside edge, press near toe more for a deeper edge
+
+!!! Three turns
+* T position when you turn
+* Keep free leg behind (don't swing forward) 
+
+!!! Power pulls
+* Keep leg in front or side
+* Swinging will make you lose balance
+
+!!! Forward skating
+* Turn out when pushing
+* Don't scrape ice with toe pick
 
 
-!! Jumps
+!! __Jumps__
+!!! Salchow
+* Make sure you &quot;check&quot; before jumping
+
+!!! Flip
+* Don't lean out too much
+
+!!! Lutz
+* Lutz: Work on arm change
 
 
-!! Spins
+!! __Spins__
+!!! Camel spin
+* Press arms together and forward at start
+* Ping leg and arms up and SQUEEZE
 
+!!! Sit spin
+* Make sure you lift the free leg higher
 
 
 ! Homework from Coach
-!! Off Ice
+!! __Off Ice__
+* Lutz takeoff
+* One leg hops in quarter turns
+* Three jump into controlled leg hops
 
-
-
-!! On Ice
-
-
+!! __On Ice__
+* Basic edges and 3 turns (focus on control)
+* Practice the FI 3 turn exercise
+* All jumps (three jump to lutz) 
+* Camel and sit spin
 </pre>
 </div>
 
